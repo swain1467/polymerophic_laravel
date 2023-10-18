@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    // sleep(5);
+    // \Mail::to('swain1467@gmail.com')->send(new \App\Mail\SendTestMail());
+    dispatch(new \App\Jobs\SendEmailJob());
     return view('welcome');
 });
 
